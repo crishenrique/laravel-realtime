@@ -1,7 +1,7 @@
 require('./bootstrap');
 window.Vue = require('vue');
 
-import store from ('./store/store')
+import store from './store/store'
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 

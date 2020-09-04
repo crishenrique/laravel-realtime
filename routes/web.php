@@ -2,7 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('chat', 'Chat\ChatController@index')->middleware([])->name('chat');
+Route::group(['middleware' => 'auth'], function (){
+    Route::get('chat', 'Chat\ChatController@index')->name('chat');
+
+    Route::post('chat/message', 'Chat\ChatController@store');   
+});
+
 
 Route::get('/', function () {
     return view('welcome');

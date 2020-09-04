@@ -2,8 +2,32 @@
     <div>
         <messages></messages>
         <div class="form-group">
-            <textarea placeholder="Sua mensagem" class="form-control"></textarea>
+            <textarea @keydown="keydownMessage" v-model="body" placeholder="Sua mensagem:" class="form-control"></textarea>
         </div>
-        <button class="btn btn-success">Enviar</button>
+        <button @click.prevent="sendMessage" class="btn btn-success">Enviar</button>
     </div>  
 </template>
+
+<script>
+export default {
+    data () {
+        return {
+            body: ''
+        }
+    },
+    methods: {
+        keydownMessage (e) {
+        if  (e.keyCode === 13 && !e.shiftKey){
+            e.preventDefault()
+
+            this.sendMessage ()
+            }
+        },
+        sendMessage () {
+            this.$store.dispatch('storeMessage', {body: this.body})
+                .then(() => this.body = '')
+        }
+    }
+
+}
+</script>

@@ -5,7 +5,7 @@ import chat from './modules/chat'
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-    modules:{
+    modules: {
         chat
     }
 
