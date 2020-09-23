@@ -8,6 +8,7 @@ use App\Models\User;
 class Message extends Model
 {
     protected $fillable = ['body'];
+    
 
     public function user()
     {

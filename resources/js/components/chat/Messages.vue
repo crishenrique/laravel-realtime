@@ -5,8 +5,8 @@
         </scale-loader>
         <message 
             v-for="message in messages" 
-            :key="message.id">
-            :message="message"
+            :key="message.id"
+            :message="message">
         </message>  
     </div>  
 </template>
@@ -15,27 +15,26 @@
 import ScaleLoader from 'vue-spinner/src/ScaleLoader.vue'
 
 export default {
-    created(){
+    created() {
         this.loadMessages()
-
     },
 
-    data (){
-        return{
+    data () {
+        return {
             laoding: false,
-
         }
     },
 
     computed: {
-        messages (){
+        messages () {
             return this.$store.state.chat.messages
         }
     },
 
     methods: {
-        loadMessages(){
+        loadMessages() {
             this.loading = true
+
             this.$store.dispatch('loadMessages')
                 .finally(() => this.loading = false)
 

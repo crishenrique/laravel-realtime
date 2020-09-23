@@ -4,7 +4,7 @@
         <div class="form-group">
             <textarea @keydown="keydownMessage" v-model="body" placeholder="Sua mensagem:" class="form-control"></textarea>
         </div>
-        <button :disable="loading" @click.prevent="sendMessage" class="btn btn-success">
+        <button :disabled="loading" @click.prevent="sendMessage" class="btn btn-success">
             <pulse-loader 
             :loading="loading" 
             :color="'#fff'" 
@@ -18,10 +18,10 @@
 
 
 <script>
-import PulseLoader from 'vue-spinner/src/PulseLoader'
+import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
 
 export default {
-    data() {
+    data () {
         return {
             body: '',
             loading: false,
@@ -35,9 +35,9 @@ export default {
             this.sendMessage()
             }
         },
-        sendMessage() {
+        sendMessage () {
             if (!this.body || this.body.trim() == '' || this.loading)
-            return
+                return
             
             this.loading = true
 
