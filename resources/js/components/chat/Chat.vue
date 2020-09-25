@@ -48,7 +48,7 @@ export default {
     },
 
     components: {
-            Pulseloader
+            PulseLoader
         }
 
 }
@@ -56,5 +56,14 @@ export default {
 
 <style scoped>
 .float-left{float: left;}
+textarea{
+    width: 700px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    padding: 6px;
+    max-width: 700px;
+    float: left;
+    }
+button{margin: 6px 6px}
 
 </style>

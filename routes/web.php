@@ -1,6 +1,6 @@
 <?php
 
-// use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => 'auth'], function (){
     Route::get('chat', 'Chat\ChatController@index')->name('chat');
