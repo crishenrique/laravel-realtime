@@ -7,7 +7,7 @@
         <div class="chat-img">
             <img src="/imgs/mikeross.png" :alt="message.user.name">
         </div>
-        <div class="message owner">
+        <div :class="['message', {'owner': message.owner}]">
             {{ message.body }}
         </div>
     </div>
