@@ -7,6 +7,9 @@ Route::group(['middleware' => 'auth'], function (){
 
     Route::get('chat/messages', 'Chat\ChatController@messages');   
     Route::post('chat/message', 'Chat\ChatController@store');   
+
+    Route::get('meu-perfil', 'User\UserController@profile')->name('profile');
+    Route::post('meu-perfil', 'User\UserController@profileUpdate')->name('profile.update');
 });
 
 
