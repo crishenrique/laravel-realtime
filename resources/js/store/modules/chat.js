@@ -12,6 +12,10 @@ export default {
 
                     ADD_MESSAGE (state, message) {
                         state.messages.push(message)
+                    },
+
+                    LOAD_USERS (state, users) {
+                        state.users(users)
                     }
                     
                 },
