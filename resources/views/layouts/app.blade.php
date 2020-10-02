@@ -19,15 +19,15 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    {{-- <script>
+    <script>
         window.Laravel = {!! json_encode([ 
-            'csrf' = csrf_token(),
+            'csrf' => csrf_token(),
             'pusher' => [
                 'key' => config('broadcasting.connections.pusher.key'),
                 'cluster' => config('broadcasting.connections.pusher.options.cluster'),
             ]
         ]) !!}
-    </script> --}}
+    </script>
 
 </head>
 <body>
