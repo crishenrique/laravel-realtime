@@ -58730,12 +58730,11 @@ __webpack_require__.r(__webpack_exports__);
 
 Echo.join('chat').here(function (users) {
   _store_store__WEBPACK_IMPORTED_MODULE_0__["default"].commit('LOAD_USERS', users);
-}).joining(function (users) {
-  console.log('joining');
-  console.log(users);
-}).leaving(function (users) {
+}).joining(function (user) {
+  _store_store__WEBPACK_IMPORTED_MODULE_0__["default"].commit('JOINING_USER', user);
+}).leaving(function (user) {
   console.log('leaving');
-  console.log(users);
+  console.log(user);
 });
 
 /***/ }),
@@ -59188,6 +59187,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     LOAD_USERS: function LOAD_USERS(state, users) {
       state.users(users);
+    },
+    JOINING_USER: function JOINING_USER(state, user) {
+      state.push(user);
     }
   },
   actions: {

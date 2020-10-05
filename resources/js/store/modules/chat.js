@@ -16,6 +16,9 @@ export default {
 
                     LOAD_USERS (state, users) {
                         state.users(users)
+                    },
+                    JOINING_USER (state, user) {
+                        state.push(user)
                     }
                     
                 },

@@ -4,11 +4,10 @@ Echo.join('chat')
     .here(users => {
         store.commit('LOAD_USERS', users)
     })
-    .joining(users => {
-        console.log('joining')
-        console.log(users)
+    .joining(user => {
+        store.commit('JOINING_USER', user)
     })
-    .leaving(users => {
+    .leaving(user => {
         console.log('leaving')
-        console.log(users)
+        console.log(user)
     })

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
@@ -30,7 +31,7 @@ class UserController extends Controller
                 if ($user->image && Storage::exists("users/{$user->image}"))
                     Storage::delete("users/{$user->image}");
 
-                $name           = kebab_case($request->name).uniqid($user->id);
+                $name           = Str::kebab($request->name).uniqid($user->id);
                 $extension      = $request->image->extension();
                 $nameImage      = "{$name}.$extension";
                 $data['image']  = $nameImage;
