@@ -5,7 +5,7 @@
         <div class="users scroll">
             <div class="user" v-for="user in users" :key="user.id">
                 <div class="user-img" v-if="user.image">
-                    <img src="`/storage/users/${user.image}`" alt="">
+                    <img :src="`/storage/users/${user.image}`" alt="">
                 </div>
                 <div class="user-img" v-else>
                     <img src="/imgs/mikeross.png" alt="">

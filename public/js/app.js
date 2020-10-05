@@ -45099,7 +45099,7 @@ var render = function() {
           user.image
             ? _c("div", { staticClass: "user-img" }, [
                 _c("img", {
-                  attrs: { src: "`/storage/users/${user.image}`", alt: "" }
+                  attrs: { src: "/storage/users/" + user.image, alt: "" }
                 })
               ])
             : _c("div", { staticClass: "user-img" }, [
@@ -58721,17 +58721,15 @@ module.exports = function(module) {
 /*!******************************!*\
   !*** ./resources/js/Echo.js ***!
   \******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var _require = __webpack_require__(/*! laravel-echo */ "./node_modules/laravel-echo/dist/echo.js"),
-    Echo = _require["default"];
-
-var _require2 = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js"),
-    Store = _require2.Store;
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./store/store */ "./resources/js/store/store.js");
 
 Echo.join('chat').here(function (users) {
-  Store.commit('LOAD_USERS', users);
+  _store_store__WEBPACK_IMPORTED_MODULE_0__["default"].commit('LOAD_USERS', users);
 }).joining(function (users) {
   console.log('joining');
   console.log(users);

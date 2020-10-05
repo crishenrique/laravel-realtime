@@ -1,9 +1,8 @@
-const { default: Echo } = require("laravel-echo");
-const { Store } = require("vuex");
+import store from './store/store'
 
 Echo.join('chat')
     .here(users => {
-        Store.commit('LOAD_USERS', users)
+        store.commit('LOAD_USERS', users)
     })
     .joining(users => {
         console.log('joining')
