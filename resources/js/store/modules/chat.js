@@ -15,10 +15,15 @@ export default {
                     },
 
                     LOAD_USERS (state, users) {
-                        state.users(users)
+                        state.users = users
                     },
                     JOINING_USER (state, user) {
-                        state.push(user)
+                        state.users.push(user)
+                    },
+                    LEAVING_USER (state, user) {
+                        state.users = state.users.filter(u => {
+                            return u.id !== user.id
+                        })
                     }
                     
                 },

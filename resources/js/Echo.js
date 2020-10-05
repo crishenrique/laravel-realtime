@@ -8,6 +8,8 @@ Echo.join('chat')
         store.commit('JOINING_USER', user)
     })
     .leaving(user => {
-        console.log('leaving')
-        console.log(user)
+        store.commit('LEAVING_USER', user)
+    })
+    .listen('Chat.MessageCreated', e => {
+        store.commit('ADD_MESSAGE', e.message)
     })

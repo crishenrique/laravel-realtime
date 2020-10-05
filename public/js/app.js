@@ -45089,7 +45089,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h3", [_vm._v(" " + _vm._s(_vm.users.lenght) + " online ")]),
+    _c("h3", [_vm._v(" " + _vm._s(_vm.users.length) + " online ")]),
     _vm._v(" "),
     _c(
       "div",
@@ -58733,8 +58733,9 @@ Echo.join('chat').here(function (users) {
 }).joining(function (user) {
   _store_store__WEBPACK_IMPORTED_MODULE_0__["default"].commit('JOINING_USER', user);
 }).leaving(function (user) {
-  console.log('leaving');
-  console.log(user);
+  _store_store__WEBPACK_IMPORTED_MODULE_0__["default"].commit('LEAVING_USER', user);
+}).listen('Chat.MessageCreated', function (e) {
+  _store_store__WEBPACK_IMPORTED_MODULE_0__["default"].commit('ADD_MESSAGE', e.message);
 });
 
 /***/ }),
@@ -59186,10 +59187,15 @@ __webpack_require__.r(__webpack_exports__);
       state.messages.push(message);
     },
     LOAD_USERS: function LOAD_USERS(state, users) {
-      state.users(users);
+      state.users = users;
     },
     JOINING_USER: function JOINING_USER(state, user) {
-      state.push(user);
+      state.users.push(user);
+    },
+    LEAVING_USER: function LEAVING_USER(state, user) {
+      state.users = state.users.filter(function (u) {
+        return u.id !== user.id;
+      });
     }
   },
   actions: {

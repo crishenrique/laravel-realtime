@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3> {{users.lenght}} online </h3>
+        <h3> {{ users.length }} online </h3>
 
         <div class="users scroll">
             <div class="user" v-for="user in users" :key="user.id">
