@@ -6598,7 +6598,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.chat-message[data-v-ca0fb00a]{\n    float: left;\n    width: 100%;\n    margin: 10px 0;\n}\n.chat-info[data-v-ca0fb00a]{\n    float: left;\n    width: 100%;\n    color: #FFF;\n}\n.chat-info span[data-v-ca0fb00a]{float: right}\n.chat-img[data-v-ca0fb00a]{float: left;}\n.chat-img img[data-v-ca0fb00a]{\n    max-width: 60px;\n    border-radius: 100%;\n    border: 1px solid #FFF;\n}\n.message[data-v-ca0fb00a]{\n    background: #FFF;\n    float: left;\n    padding: 12px 6px;\n    border-radius: 4px;\n    color: #221d1d;\n    position: relative;\n    margin: 10px 14px 0 8px;\n    /* margin: 32px 9px 0 72px; */\n}\n.message.owner[data-v-ca0fb00a]{background: #dcf8c6;}\n.message[data-v-ca0fb00a]:before{\n    position: absolute;\n    right: 100%;\n    top: 15px;\n    border: solid transparent;\n    border-right-color: #ffffff;\n    content: ' ';\n    height: 0;\n    width: 0;\n    pointer-events: none;\n    border-width: 6px;\n    margin-top: -8px;\n}\n.message.owner[data-v-ca0fb00a]:before{border-right-color: #dcf8c6;}\n", ""]);
+exports.push([module.i, "\n.chat-message[data-v-ca0fb00a]{\n    float: left;\n    width: 100%;\n    margin: 10px 0;\n}\n.chat-info[data-v-ca0fb00a]{\n    float: left;\n    width: 100%;\n    color: #FFF;\n}\n.chat-info span[data-v-ca0fb00a]{\n    float: right;\n    padding-right: 5px;\n}\n.chat-img[data-v-ca0fb00a]{float: left;}\n.chat-img img[data-v-ca0fb00a]{\n    max-width: 60px;\n    border-radius: 100%;\n    border: 1px solid #FFF;\n}\n.message[data-v-ca0fb00a]{\n    background: #FFF;\n    float: left;\n    padding: 12px 6px;\n    border-radius: 4px;\n    color: #221d1d;\n    position: relative;\n    margin: 10px 14px 0 8px;\n    /* margin: 32px 9px 0 72px; */\n}\n.message.owner[data-v-ca0fb00a]{background: #dcf8c6;}\n.message[data-v-ca0fb00a]:before{\n    position: absolute;\n    right: 100%;\n    top: 15px;\n    border: solid transparent;\n    border-right-color: #ffffff;\n    content: ' ';\n    height: 0;\n    width: 0;\n    pointer-events: none;\n    border-width: 6px;\n    margin-top: -8px;\n}\n.message.owner[data-v-ca0fb00a]:before{border-right-color: #dcf8c6;}\n", ""]);
 
 // exports
 
@@ -6636,7 +6636,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.users[data-v-64fd5708]{float: left; width: 100%; overflow-x: hidden; overflow-y: auto; height: 400px; max-height: 400px;}\n.user[data-v-64fd5708]{float: left; width: 100%;margin: 10px 0;}\n.user-img[data-v-64fd5708]{float: left;}\n.user-img img[data-v-64fd5708]{\n    max-width: 40px;\n    border: 1px solid #fff;\n    border-radius: 100%;\n}\n.user strong[data-v-64fd5708]{\n    float:left;\n    margin: 9px 4px;\n}\n", ""]);
+exports.push([module.i, "\n.users[data-v-64fd5708]{float: left; width: 100%; overflow-x: hidden; overflow-y: auto; height: 400px; max-height: 400px;}\n.user[data-v-64fd5708]{float: left; width: 100%;margin: 10px 0;}\n.user-img[data-v-64fd5708]{float: left;}\n.user-img img[data-v-64fd5708]{\n    max-width: 40px;\n    border: 1px solid #fff;\n    border-radius: 100%;\n}\n.user strong[data-v-64fd5708]{\n    float:left;\n    margin: 9px 4px;\n    color: #f5f5f5;\n}\nh3[data-v-64fd5708]{\n    color: #f5f5f5;\n}\n", ""]);
 
 // exports
 

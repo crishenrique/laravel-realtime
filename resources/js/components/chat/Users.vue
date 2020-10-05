@@ -38,5 +38,9 @@ export default {
 .user strong{
     float:left;
     margin: 9px 4px;
+    color: #f5f5f5;
+}
+h3{
+    color: #f5f5f5;
 }
 </style>

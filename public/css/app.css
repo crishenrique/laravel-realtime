@@ -10905,7 +10905,7 @@ a.text-dark:focus {
 }
 
 body {
-  background: url("/imgs/themeedit.png");
+  background: #2c3e50;
 }
 
 .scroll::-webkit-scrollbar-track {

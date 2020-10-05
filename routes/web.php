@@ -12,6 +12,10 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('meu-perfil', 'User\UserController@profileUpdate')->name('profile.update');
 });
 
+Route::get('/logout', function(){
+    Auth::logout();
+    return Redirect::to('login');
+});
 
 Route::get('/', function () {
     return view('welcome');

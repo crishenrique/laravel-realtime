@@ -33,7 +33,10 @@ export default {
     width: 100%;
     color: #FFF;
 }
-.chat-info span{float: right}
+.chat-info span{
+    float: right;
+    padding-right: 5px;
+    }
 .chat-img{float: left;}
 .chat-img img{
     max-width: 60px;
